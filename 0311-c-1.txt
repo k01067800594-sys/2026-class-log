@@ -1,0 +1,34 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    char trip_name[30]; //여행지이름 저장(문자열)
+    int trip_day;
+    float trip_money;
+    char trip_tier;
+    
+    printf("여행지:");  //화면출력 f(서식)
+    //숫자->""없음, "문자"
+    scanf("%s",trip_name);  //키보드로 입력
+                            //문자열은 %s
+    //&->주소 의미
+    //문자열은 &사용안함->문자열 이름은 그 자체가 주소
+    printf("여행 일수:");
+    scanf("%d",&trip_day);  //%d:정수
+    printf("여행 경비:");
+    scanf("%f",&trip_money);    //%f:실수
+    printf("여행 등급(A-B-C):");
+    scanf(" %c",&trip_tier);    //%c:문자1글자
+    //%c 앞에 공백주는이유:위의 엔터키를 상쇄시키기 위해서
+    
+    printf("\n====여행일정====\n");
+    printf("여행지:%s\n",trip_name);
+    printf("여행 일수:%10d\n",trip_day);
+    //%10d=전체자리수10자리
+    printf("여행 경비:%5.1f\n",trip_money);
+    //%(  ).(  )f=%전체자리수.소수점자리수
+    //소수점 자리수를 넘기면 반올림해서 표기
+    printf("여행 등급:%c\n",trip_tier);
+    
+    return 0;
+}
