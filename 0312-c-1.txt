@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+    int num;
+    
+    while(1)  //while=반복, 0->거짓(false), 1->참(true)
+              //무한반복
+   {
+    printf("숫자 입력:");
+    scanf("%d",&num);
+    
+    if(num==10){
+        printf("정답입니다\n");
+        break;
+        
+    }
+    else if(num>10){
+        printf("너무 높아요\n");
+    }
+
+    else if(num<10){
+        printf("너무 낮아요\n");
+    }
+   }
+    
+    return 0;
+}
