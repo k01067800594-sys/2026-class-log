@@ -1,0 +1,25 @@
+// Online C compiler to run C program online
+#include <stdio.h>
+
+int main() {
+    
+    int num;
+    printf("숫자를 입력해주세요:");
+    scanf("%d",&num);
+    //조건문
+    if(num%2==0){	
+ 	//if 조건문(), %나머지,>초과, <미만, >=이상, <=이하, ==같다, !같지 않다
+    //num의 값을 2로 나눴을때 0인가
+    //if문에 {}를 써서 나눠줘야 실행된다
+    printf("짝수\n");
+    printf("2로 나눈 나머지가 0\n");
+}
+    else{ 	
+	//else는 if에서 거짓일때를 실행해준다
+    printf("홀수\n");
+    printf("2로 나눈 나머지가 1\n");
+    //10보다 크면->10초과 출력, 10이하는 출력X
+    }
+
+    return 0;
+}
