@@ -1,0 +1,64 @@
+#include <stdio.h>
+
+int main()
+{
+    int sum, sub, mul; 	//변수를 같은곳에 지정할땐 같이 놔둬도 된다.
+                           	//덧셈 뺄셈 곱셈
+    int num1, num2;
+    double divi;		//나눗셈
+    char op;
+    
+    
+    printf("첫번째 숫자 입력:");
+    scanf("%d",&num1);
+    printf("연산자 입력(+ - * /):");
+    scanf(" %c",&op);
+    printf("두번째 숫자 입력:");
+    scanf("%d",&num2);
+    
+    /*switch(op)
+    {
+        case '+':
+            sum=num1 + num2;
+            printf("덧셈 결과:%d\n",sum);
+            break;
+        case '-':
+            sub=num1 - num2;
+            printf("뺄셈 결과:%d\n",sub);
+            break;
+        case '*':
+            mul=num1 * num2;
+            printf("곱셈 결과:%d\n",mul);
+            break;
+        case '/':
+            divi=(double)num1 / num2;	//switch에서 연산을 하고 실수를 내보낼땐 사용한 변수(float, double)을 써줘야 실수값으로 나온다.
+            printf("나눗셈 결과:%.2f\n",divi);
+            break;
+        default:
+            printf("입력오류");
+            break;
+    }*/
+	//switch case문
+    if(op=='+'){
+        sum=num1+num2;
+        printf("덧셈 결과:%d\n",sum);
+    }
+    else if(op=='-'){
+        sub=num1-num2;
+        printf("뺄셈 결과:%d\n",sub);
+    }
+    else if(op=='*'){
+        mul=num1*num2;
+        printf("곱셈 결과:%d\n",mul);
+    }
+    else if(op=='/'){
+        divi=(double)num1/num2;
+        printf("나눗셈 결과:%.2f\n",divi);
+    }
+    else
+        printf("입력오류");
+    	//if else문
+   
+    
+    return 0;
+}
